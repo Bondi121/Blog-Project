@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Creating Post</title>
+</head>
+<body>
+    <div class="container">
+            <nav>
+                <a href="/homepage">My Blog Website</a>
+            </nav>
+        <div>
+            <form action="/create_post" method="post">
+                <div class="field">
+                    <label for="title">Post Title:</label><br>
+                    <input type="text" id="title" name="title"><br>
+                </div>
+                <div class="field">
+                    <label for="content">Post Content:</label><br>
+                    <textarea id="content" name="content"></textarea>
+                </div>
+                <input type="text" id="username" name="username" hidden>    <!-- value update using javascript -->
+                <input type="submit" value="Submit" class="button_submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Gabriel</p>
+    </footer>
+
+    <script src="{{url_for('static', filename='create_post.js')}}"></script>
+
+</body>
+</html>

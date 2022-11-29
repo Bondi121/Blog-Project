@@ -1,0 +1,22 @@
+Blog Website
+
+1. Authentication (login/logout/forget password) / not a requirement / add reference / cannot be included for review
+2. Ability to post / ability to edit
+3. Ability to like a post
+4. logout
+5. Ability to comment
+7. Pagination
+8. Local storage (other users cannot retrieve information) / Login details / The last time you logged in etc.was...
+
+no password, no need to authenticate, different user can post something, only specific user can edit own post
+multiple users, no authentication, 
+
+what goes into local storage and what goes in the backend storage
+text file, csv file, sql
+
+blogwebsite upload real
+
+
+
+Object relational mapper like sqlalchemy to create schema
+--> Ask tutor

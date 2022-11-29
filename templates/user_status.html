@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Profile page</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="home link">
+                <a href="/homepage">My Blog Website</a>
+            </div>
+        </nav>
+
+        <main>
+            <p>User status : {{user_status}}</p>
+        </main>
+    </div>
+    
+</body>
+</html>

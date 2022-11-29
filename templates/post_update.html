@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Post Update</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/homepage">My Blog Website</a>
+            <a href="/create_post">create a new post </a>
+        </nav>
+        <main>
+            <section>
+                <form action="{{url_for('update_post', id=post_details.id) }}" method="post">
+                    <div class="field">
+                        <label for="title_update">Title</label><br>
+                        <input type="text" id="title_update" name="title" value="{{post_details.title}}"><br>
+                    </div>
+                    <div class="field">
+                        <label for="content_update">Content</label><br>
+                        <input type="text" id="content_update" name="content" value="{{post_details.content}}"><br>
+                    </div>
+                    <input type="submit" value="Save" class="button_submit">
+                </form>
+            </section>
+        </main>
+    </div>
+
+     <!--   <script src="{{url_for('static', filename='index.js')}}"></script> -->
+
+    
+</body>
+</html>
+
+    <!--
+        https://flask.palletsprojects.com/en/2.2.x/tutorial/blog/?highlight=loop
+    -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>User Update</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/homepage">My Blog Website</a>
+        </nav>
+        <main>
+            <section>
+                <form action="{{url_for('update_user', username=user_details.username) }}" method="post">
+
+                    <label for="firstname_update">First name</label><br>
+                    <input type="text" id="firstname_update" name="firstname" value="{{user_details.first_name}}"><br>
+
+                    <label for="lastname_update">Last name</label><br>
+                    <input type="text" id="lastname_update" name="lastname" value="{{user_details.last_name}}"><br>
+
+                    <label for="address_update">Address</label><br>
+                    <input type="text" id="address_update" name="address" value="{{user_details.address}}"><br>
+
+                    <label for="email_update">Email</label><br>
+                    <input type="text" id="email_update" name="email" value="{{user_details.email}}"><br><br>
+
+                    <input type="submit" value="Save">
+                    
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{url_for('static', filename='user_update.js')}}"></script>
+
+    
+</body>
+</html>
+
+    <!--
+        https://flask.palletsprojects.com/en/2.2.x/tutorial/blog/?highlight=loop
+    -->

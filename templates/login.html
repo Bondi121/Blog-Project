@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/homepage">My Blog Website</a><br>
+        </nav>
+        <main>
+            <div class="login">
+                <form action="/login" method="post" id="form_login">
+                    <div class="field">
+                        <label for="username_login">Username</label><br>
+                        <input type="text" id="username_login" name="username">
+                    </div>
+                    <input type="submit" value="Submit" class="button_submit">
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="{{url_for('static', filename='login.js')}}"></script>
+    
+</body>
+</html>

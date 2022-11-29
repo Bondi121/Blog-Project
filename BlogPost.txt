@@ -1,0 +1,10 @@
+1. Authentication (login/logout/forget password)
+2. Ability to post
+3. Ability to like a post
+4. logout
+5. Ability to comment
+7. Pagination
+8. Local storage
+
+
+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

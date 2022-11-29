@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Register</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="/homepage">My Blog Website</a>
+        </nav>
+        <main>
+            <form action="/registration" method="post">
+                <div class="field">
+                    <label for="firstname_register">First name:</label><br>
+                    <input type="text" id="firstname_register" name="firstname" required><br>
+                </div>
+                <div class="field">
+                    <label for="lastname_register">Last name:</label><br>
+                    <input type="text" id="lastname_register" name="lastname" required><br>
+                </div>
+                <div class="field">
+                    <label for="username_register">Username:</label><br>
+                    <input type="text" id="username_register" name="username" required><br>
+                </div>
+                <div class="field">
+                    <label for="email_register">Email:</label><br>
+                    <input type="email" id="email_register" name="email" required><br>
+                </div>
+                <div class="field">
+                    <label for="address_register">Address:</label><br>
+                    <input type="text" id="address_register" name="address"><br>
+                </div>
+                <input type="submit" value="Submit" class="button_submit">
+            </form>
+        </main>
+    </div>
+
+  <!--   <script src="{{url_for('static', filename='index.js')}}"></script> -->
+
+    
+</body>
+</html>

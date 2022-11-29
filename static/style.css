@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Roboto:wght@300;400&display=swap");
+
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1128px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    background-color: aquamarine;
+}
+
+#identity {
+  padding: 5px 8px;
+  min-width: 70px;
+}
+
+#search_form {
+  padding-bottom: 20px;
+}
+
+#search_form #title {
+  width: 50%;
+}
+
+#search_form button {
+  width: 80px;
+}
+
+#heading {
+  margin: 20px 0;
+}
+
+.post {
+  margin: 20px 0;
+  background-color: rgba(198, 198, 216, 0.45);
+  padding: 1em 0;
+  padding-left: 0.8em;
+}
+
+.post p {
+  margin-top: 10px;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: ghostwhite;
+  color: black;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+
+}
+
+.field input {
+  width: 50%;
+  height: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.field textarea {
+  width: 50%;
+  min-height: 2rem;
+  padding:  1rem;
+}
+
+.button_submit {
+  width: 100px;
+  padding: 0.6rem;
+}
+
+.delete_item {
+  margin-top: 1.5rem;
+}
+/*
+.decide {
+  display: flex;
+  justify-content: space-between;
+}
+*/
+
+#user_post {
+  margin: 2rem 0;
+}
+
+#delete_button {
+  min-width: 100px;
+  padding: 0.4rem;
+  background-color: rgb(233, 61, 61);
+}
+
+#user_details p{
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+#update_button {
+  min-width: 100px;
+  padding: 0.4rem;
+  background-color: rgb(140, 235, 140);
+}
+
+.login {
+  margin: auto;
+  min-width: 60%;
+  padding: 10px;
+}
+
+#post_title {
+  padding: 1rem 0;
+}
+
+small {
+  font-weight: bold;
+  font-size: medium;
+}
+
+
+
+

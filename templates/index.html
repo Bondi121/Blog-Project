@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Blog post</title>
+    {{ moment.include_moment() }}
+</head>
+<body>
+    <div class="container">
+
+  <!--   
+    https://flask-moment.readthedocs.io/en/latest/quickstart.html#installation-and-configuration
+ -->
+
+        <nav>
+            <div class="home_link">
+                <a href="/homepage">My Blog Website</a>
+            </div>
+            <div class="nav_link">
+                <a href="/registration" id="registration_id">Registration /</a>
+                <a href="/login" id="login_id">User login /</a>
+                <a href="/profile" id="profile_id">User profile /</a>
+                <a href="/create_post" id="create_post_id">Create a new post </a>
+                <button id="identity">Anonymous</button>
+            </div>
+        </nav> 
+  
+        <form action="/search_post" method="post" id="search_form">
+            <div class="field">
+                <label for="title">Search by Title:</label>
+                <input type="text" id="title" name="title">
+                <button class="button_submit" type="submit">Search</button>
+            </div>
+        </form>
+
+        <main>
+            <h2 id="heading">All the posts:</h2>
+
+            {% for blog in blogs %}
+            <article class="post">
+                
+                <a href="{{url_for('get_post', title=blog.title) }}"><h2>{{blog.title}}</h2></a>
+                <p>Post created at: {{ moment(blog.date_posted).format('MMMM Do YYYY, h:mm a') }}.</p>
+            </article>
+            {% endfor %}
+            
+    <!--
+        https://flask.palletsprojects.com/en/2.2.x/quickstart/#rendering-templates 
+        https://flask.palletsprojects.com/en/2.2.x/tutorial/blog/?highlight=loop 
+    -->
+            
+        </main>
+
+        <footer>
+            created by gabriel
+        </footer>
+    </div>
+
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+
+</body>
+</html>

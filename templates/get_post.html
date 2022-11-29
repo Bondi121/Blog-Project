@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css')}}">
+    <title>Document</title>
+    {{ moment.include_moment() }}
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/homepage">My Blog Website</a>
+            <a href="/create_post">create a new post </a>
+        </nav>
+        <main>
+            <section>
+                {% for post in post_details %}
+                <article>
+                <h2 id="post_title">{{post.title}}</h2>
+                <p> <small>Post content:</small><br>{{post.content}}</p><br>
+                <p> <small>Post created at:</small><br>{{ moment(post.date_posted).format('MMMM Do YYYY, h:mm:ss a') }}.</p>
+                </article>
+                {% endfor %}
+            </section>
+        </main>
+    </div>
+
+  <!--   <script src="{{url_for('static', filename='index.js')}}"></script> -->
+  
+</body>
+</html>
+
+
